@@ -33,8 +33,6 @@ public class ex11 {
 	
    public static String extenso() {
 	   
-	   String meses = null;
-	   
 	   System.out.println("Informe o mes: ");
 	   
 	   Scanner entrada = new Scanner (System.in);
@@ -43,52 +41,45 @@ public class ex11 {
 		
 		while (mes < 1 || mes > 12) {
 			System.out.println("Mes invalido. Reinicie o programa. ");
+			break;
 		}
+	
+		String mesdef = null;
 		
 		entrada.close();
 	  
-	   switch (mes) {
+	   String [] meses1 = new String [13];
 	   
-	   case 1:
-	   meses = "Janeiro";
+	   meses1[1] = "Janeiro";
+	  
+	   meses1[2] = "Fevereiro";
+	  
+	   meses1[3] = "Março";
 	   
-	   case 2:
-	   meses = "Fevereiro";
+	   meses1[4] = "Abril";
 	   
-	   case 3:
-	   meses = "Março";
+	   meses1[5] = "Maio";
 	   
-	   case 4:
-	   meses = "Abril";
+	   meses1[6] = "Junho";
 	   
-	   case 5:
-	   meses = "Maio";
+	   meses1[7] = "Julho";
 	   
-	   case 6:
-	   meses = "Junho";
+	   meses1[8] = "Agosto";
 	   
-	   case 7:
-	   meses = "Julho";
+	   meses1[9] = "Setembro";
+	    
+	   meses1[10] = "Outubro";
+	  
+	   meses1[11] = "Novembro";
+	    
+	   meses1[12] = "Dezembro";
 	   
-	   case 8:
-	   meses = "Agosto";
-	   
-	   case 9:
-	   meses = "Setembro";
-	   
-	   case 10:
-	   meses = "Outubro";
-	   
-	   case 11:
-	   meses = "Novembro";
-	   
-	   case 12: 
-	   meses = "Dezembro";
-	   
+	   for (int x = 1; x < mes; x++ ) {
+		   mesdef = meses1[x];
 	   }
 	   
 	
-	return meses;
+	return mesdef;
 	   
    }
 
